@@ -1,69 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    min-height: 100vh;
 }
 
-.container {
+.main-container {
+    padding: 0;
     margin: 0;
-    padding: 200px;
-    height: 80vh;
+    min-height: 100vh;
     min-width: 100vw;
-    background-color: #19747E;
     display: flex;
     align-items: center;
-}
-
-.subtext1, h4 {
-    color: #BEFBFF;
-}
-
-.p1 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 130px;
-    line-height: 195px;
-    font-family: 'Merriweather';
-}
-
-#stackAnimation {
-    width: 200px;
-    height: 400px;
-    border: 3px solid black;
-    position: relative;
-    overflow: hidden;
-}
-
-
-#stackAnimation {
-    width: 200px;
-    height: 280px;
-    border: 3px solid #BEFBFF;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    border-top: none;
-    display: flex;
     justify-content: center;
+    background-color: #DFD0B8; 
 }
 
-.rectangle {
-    width: 90%; 
-    height: 40px;
-    background-color: #BEFBFF;
-    border-radius: 10px;
-    position: absolute;
-    margin-bottom: 5px; 
-    top: -20px; /* Start above the container */
-    animation: drop 1s ease-out forwards; /* Animation named 'drop' */
+.row {
+    display: flex;
+    width: 100%;
 }
 
-@keyframes drop {
-    0% {
-        top: -20px; /* Start position */
+.left, .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+.left p,.right p{
+   font-family: 'Cantata One';
+   font-size: 120px;
+   line-height: 180px;
+   font-weight: bold;
+}
+.left {
+    padding-top: 365px;
+    align-items: flex-end;
+    margin-left: 120px;
+    background-color: #153448;
+    color: #DFD0B8;
+    padding-right: 30px;
+}
+
+.right {
+    padding-left: 30px;
+    padding-top: 300px;
+    background-color: #DFD0B8;
+    color: #153448;
+}
+
+h4{
+    padding-right: 550px;
+    font-family: 'Sedan';
+}
+h1 {
+    font-size: 48px;
+    font-family: 'Sedan';
+}
+nav {
+    overflow: hidden;
+}
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent; /* Ensure there's no default background */
+}
+
+.navbar ul {
+    color: #153448;
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    height: 90px;
+    margin: 0;
+}.navbar li {
+    padding: 10px 20px 10px 10px; /* Padding adjusted for visual balance */
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: 'Sedan';
+    position: relative;
+    margin-right: 20px; /* Space between navbar items */
+}
+
+.navbar a {
+    color: #153448;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    background-color: transparent; /* Ensure links don't have a background */
+}
+
+/* Remove background change on hover */
+.navbar a:hover {
+    background-color: transparent;
+    animation: bounce 1s forwards;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
     }
-    100% {
-        top: 230px; /* End position - change this based on where you want it to stop */
+    50% {
+        transform: translateY(-10px);
     }
+}
+.triangle {
+    width: 0;  
+    margin-top: 200px;
+    margin-left: 200px;
+    height: 0;
+    transform-origin: 50% 100%; 
+    transform: rotate(45deg) translate(-50%, -50%);; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent; 
+    border-top: 100px solid #153448;
+    animation: slideIn 2s ease-out forwards; 
+}
+
+.rotated-rectangle {
+    width: 200px; 
+    height: 200px; 
+    background-color: #153448; 
+    transform: rotate(45deg); 
+    transform-origin: center; 
+    position: relative;
+    top: 50px; 
+    left: 800px; 
+}
+
+.circle {
+    margin-left: 600px;
+    width: 100px;
+    height: 100px;
+    background-color: #153448; 
+    border-radius: 50%; 
+    animation: slideIn 2s ease-out forwards; 
+}
+
+
+.circle-left {
+    margin-top: 400px;
+    margin-right: 600px;
+    width: 95px; 
+    height: 95px;
+    background-color: #DFD0B8; 
+    border-radius: 50%; 
+    animation: slideInLeft 2s ease-out forwards; 
+}
+.line {
+    margin-right: 800px;
+    width: 30%; 
+    height: 5px;
+    background-color: #DFD0B8; 
+    transform: rotate(45deg); 
+    animation: slideInLeft 2s ease-out forwards; 
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw) translateY(-100vh); 
+    }
+    to {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100vw) translateY(100vh);
+    }
+    to {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.experience-section {
+    min-height: 100vh;
+    background-color: #153448;
+    color: #DFD0B8;
+    padding: 50px 0; 
+}
+
+.experience-container {
+    width: 80%; 
+    margin: 0 auto; 
+    margin-left: 120px;
+}
+
+.about-section{
+    background-color: #DFD0B8;
+    min-height: 100vh;
+}
+
+.projects-section {
+    min-height: 100vh;
+    background-color: #DFD0B8;
+    color: #DFD0B8;
+    padding: 50px 0; 
+}
+
+.projects-container {
+    width: 80%; 
+    margin: 0 auto; 
+    margin-left: 120px;
+}
+
+.project1left{
+    background-color: #153448;
+    margin-left: 120px;
+    height: 120px;
+    width: 120px;
 }
