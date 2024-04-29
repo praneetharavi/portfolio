@@ -19,7 +19,7 @@ body {
     display: flex;
     width: 100%;
 }
-
+  
 .left, .right {
     flex: 1;
     display: flex;
@@ -34,7 +34,7 @@ body {
    font-weight: bold;
 }
 .left {
-    padding-top: 365px;
+    padding-top: 355px;
     align-items: flex-end;
     margin-left: 120px;
     background-color: #153448;
@@ -206,30 +206,39 @@ nav {
     padding: 0;
     margin: 0;
 }
-.about-container .row{
-    padding: 320px 120px;
+.aboutrow{
     font-family: 'Sedan';
     font-size: 1.6em;
     color: #153448;
+    padding: 300px 200px;
+}
+
+.aboutleft{
+    padding: 20px;
 }
 
 .aboutright{
-    background-color: #153448;
-    margin: 0 100px;
-    height: 400px;
-    width: 400px;
+    padding-left: 130px;
+    display: flex;
+    justify-content: center;
 }
-  .icon img {
-    width: 40px;
-    height: 40px;
-  }
 
-  .icons p{
-      font-size: 0.6em;
-  }
-  .icons .row{
-      padding: 0;
-      margin: 0;
+
+.skillrow{
+    padding: 20px;
+    margin:0;
+}
+
+.skills .skill {
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    height: 50px;
+    margin: 15px; /* Adds some space around each skill */
+    padding: 5px 10px; /* Adds space inside each box */
+    border: 2px solid #153448;
+    box-shadow: 5px 10px #FF6F61;
+    border-radius: 5px; /* Optional: Rounds the corners of the boxes */
   }
 @keyframes strongslide {
     from {
