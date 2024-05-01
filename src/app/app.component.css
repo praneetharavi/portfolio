@@ -239,7 +239,16 @@ nav {
     border: 2px solid #153448;
     box-shadow: 5px 10px #FF6F61;
     border-radius: 5px; /* Optional: Rounds the corners of the boxes */
+    animation: shadowRise 1s alternate; 
   }
+  @keyframes shadowRise {
+    0% {
+        box-shadow: 5px 20px #DFD0B8; /* Start with the shadow lower and more spread */
+    }
+    100% {
+        box-shadow: 5px 10px #FF6F61; /* End with the shadow closer and less spread */
+    }
+}
 @keyframes strongslide {
     from {
         transform: translateX(100vw) translateY(-100vh); 
@@ -360,3 +369,142 @@ nav {
     font-family: 'Sedan';
     font-weight: bold;
 }
+.experience-container {
+    margin: auto;
+    position: relative;
+    width: 100%; 
+}
+
+.experiencerow {
+    padding-left: 70px;
+    margin: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.experience-date {
+    flex-basis: 10%; /* Allocates 10% of the flex container’s space to the date */
+    text-align: right;
+    position: relative;
+    padding-right: 20px;
+    opacity: 0; /* Start fully transparent */
+    transform: translateX(-100%);
+    animation: slideInLeft 0.5s forwards;
+}
+
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fillCircle {
+    0% {
+        background: transparent; /* Circle starts transparent */
+    }
+    100% {
+        background: #FF6F61; /* Circle fills with color */
+    }
+}
+
+.experience-date h3 {
+    font-size: 1.3em;
+    font-family: 'Sedan';
+    margin: 0;
+    position: relative;
+    z-index: 2; /* Ensures the text is above the line */
+    color: #DFD0B8; /* Brings the text above the line */
+}
+
+
+.experience-date::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -42px; /* Position the circle correctly */
+    width: 15px;
+    height: 15px;
+    border: 3px solid #FF6F61; /* Makes the circle hollow */
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateY(-50%); /* Centers the circle vertically relative to the date */
+    background: transparent; /* Start with a transparent background */
+    animation: fillCircle 0.5s 0.5s forwards; /* Delay the start to sync with the slide-in */
+}
+
+.experience-description {
+    flex-grow: 1; /* Allows the description to take up the rest of the space */
+    padding-left: 300px; /* Space after the line */
+    position: relative;
+    top: -10px; /* Moves the description slightly up to align with the date */
+}
+
+.experience-description strong {
+    opacity: 0;
+    transform: translateX(100%); 
+    animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateX(100vw) translateY(-100vh);/* Start from 100% to the right */
+    }
+    100% {
+        opacity: 1; /* Fully opaque */
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+.experience-description h3 {
+    font-family: 'Sedan';
+    margin-top: 0;
+}
+
+.experience-container::before {
+    content: '';
+    position: absolute;
+    left: 17%; /* Aligns with the flex-basis of the date section */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #FF6F61; /* Adjusts the color of the line */
+}
+
+ul{
+    font-family: 'Sedan';
+    font-size: 1.3em;
+    list-style-type: square;
+    color: #ebe2d4;
+}
+
+.projects-container{
+    padding: 90px;
+}
+.projectrow{
+    padding-bottom: 200px;
+}
+.projects-container img{
+    border: 10px solid #ebe2d4;
+    border-radius: 30px;
+    width: 750.99px;
+    height: 451.15px;
+    padding: 2px;
+
+}
+
+.project1right,.project2left,.project3right{
+    padding: 100px;
+    color: #153448;
+    font-family: 'Sedan';
+}
+.project1right,.project2left,.project3right p{
+    font-size: 1.3em;
+}
+
