@@ -488,7 +488,7 @@ ul{
     padding: 90px;
 }
 .projectrow{
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
 .projects-container img{
     border: 10px solid #ebe2d4;
@@ -501,10 +501,14 @@ ul{
 
 .project1right,.project2left,.project3right{
     padding: 100px;
-    color: #153448;
     font-family: 'Sedan';
 }
-.project1right,.project2left,.project3right p{
+.project1right p,.project2left p,.project3right p{
     font-size: 1.3em;
+    color: #153448;
 }
 
+.project1right h1,.project2left h1,.project3right h1{
+    color: #FF6F61;
+    font-weight: bold;
+}
