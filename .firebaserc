@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "praneetharaviportfolio"
+  },
+  "targets": {
+    "praneetharaviportfolio": {
+      "hosting": {
+        "portfolio": [
+          "praneetharaviportfolio"
+        ]
+      }
+    }
+  }
+}
