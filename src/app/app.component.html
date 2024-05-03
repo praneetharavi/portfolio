@@ -1,28 +1,46 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<nav class="navbar">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/assets/PraneethaRaviResume.pdf" title="Download PDF" target="_blank"> Resume</a></li>
-    </ul>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-light" [ngClass]="{'dark-theme': isDarkThemeActive}">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> <!-- Note ms-auto for Bootstrap 5 to align items to the right -->
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/assets/PraneethaRaviResume.pdf" title="Download PDF" target="_blank">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  
 <div class="sections" *ngIf="!isResumePage">
     <div class="main-container">
         <div class="row">
-            <div class="col-md-6 left">
+            <div class="cpl-12 col-md-6 left">
                 <div class="line"></div>
 
                 <h4>Hello, I am</h4>
                 <p>Praneetha</p>
                 <div class="circle-left"></div>
             </div>
-            <div class="col-md-6 right">
+            <div class="cpl-12 col-md-6 right">
                 <div class="circle"></div>
                 <p>Ravi</p>
                 <h1>Full Stack Developer<strong style="color:#FF6F61">.</strong></h1>
@@ -34,7 +52,7 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="row aboutrow">
-                <div class="col-md-6 aboutleft">
+                <div class="cpl-12 col-md-6 aboutleft">
                     <p>
                         Hello! I am <strong>Praneetha Ravi</strong>, a <strong>Full Stack Developer</strong> located in
                         Albany,
@@ -58,7 +76,7 @@
 
                     </p>
                 </div>
-                <div class="col-md-6 aboutright">
+                <div class="cpl-12 col-md-6 aboutright">
                     <div class="skills">
                         <div class="row skillrow">
                             <p class="skill">Angular</p>
@@ -90,10 +108,10 @@
     <section id="experience" class="experience-section">
         <div class="experience-container">
             <div class="row experiencerow">
-                <div class="experience-date">
+                <div class="col-12 col-md-3 experience-date">
                     <h3>2023 - Now</h3>
                 </div>
-                <div class="experience-description">
+                <div class="col-12 col-md-9 experience-description">
                     <h3>Freelancer</h3>
                     <ul>
                         <li>Developed 'Learn Tracker', a dynamic educational tool designed to track and analyze student progress throughout academic courses. </li>
@@ -102,18 +120,18 @@
                 </div>
             </div>
             <div class="row experiencerow">
-                <div class="experience-date">
+                <div class="col-12 col-md-3 experience-date">
                     <h3>2021 - 2023</h3>
                 </div>
-                <div class="experience-description">
+                <div class="col-12 col-md-9 experience-description">
                     <h3> Masters Degree in <strong style="color: #FF6F61;">Computer Science</strong></h3>
                 </div>
             </div>
             <div class="row experiencerow">
-                <div class="experience-date">
+                <div class="col-12 col-md-3 experience-date">
                     <h3>Oct 2019 - Nov 2021</h3>
                 </div>
-                <div class="experience-description">
+                <div class="col-12 col-md-9 experience-description">
                     <h3>Software Developer <strong style="color: #FF6F61;">Valuelabs</strong> </h3>
                     <ul>
                         <li>Engineered a robust API integration for Facebook Workplace, facilitating bulk skill updates,
@@ -129,10 +147,10 @@
                 </div>
             </div>
             <div class="row experiencerow">
-                <div class="experience-date">
+                <div class="col-12 col-md-3 experience-date">
                     <h3>June 2019 - Sept 2019</h3>
                 </div>
-                <div class="experience-description">
+                <div class="col-12 col-md-9 experience-description">
                     <h3>Web Developer Intern <strong style="color: #FF6F61;">VarnaLed</strong> </h3>
                     <ul>
                         <li>
@@ -148,10 +166,10 @@
                 </div>
             </div>
             <div class="row experiencerow">
-                <div class="experience-date">
+                <div class="col-12 col-md-3 experience-date">
                     <h3>Dec 2018 - May 2019</h3>
                 </div>
-                <div class="experience-description">
+                <div class="col-12 col-md-9 experience-description">
                     <h3>Software Devloper Intern <strong style="color: #FF6F61;"> Indian Servers</strong></h3>
                     <ul>
                         <li>
@@ -166,10 +184,10 @@
                 </div>
             </div>
             <div class="row experiencerow">
-                <div class="experience-date">
+                <div class="col-12 col-md-3 experience-date">
                     <h3>2016 - 2020</h3>
                 </div>
-                <div class="experience-description">
+                <div class="col-12 col-md-9 experience-description">
                     <h3>Bachelors Degree in <strong style="color: #FF6F61;"> Computer Science</strong></h3>
                 </div>
             </div>
@@ -177,31 +195,30 @@
     </section>
     <section id="projects" class="projects-section">
         <div class="projects-container">
-            <h2>Projects</h2>
             <div class="row projectrow">
-                <div class="col-md-6 project1left">
+                <div class="cpl-12 col-md-6 project1left">
                     <img src="/assets/learntracker1.jpeg" alt="Learn Tracker">
                 </div>
-                <div class="col-md-6 project1right">
+                <div class="cpl-12 col-md-6 project1right">
                     <h1>Learn Tracker</h1>
                     <p>Web application that enables students to track their academic progress, maintain journals, view class schedules, and access performance analytics. It includes a leaderboard for motivational badges and allows professors to monitor student achievements. </p>
                 </div>
             </div>
             <div class="row projectrow">
-                <div class="col-md-6 project2left">
+                <div class="cpl-12 col-md-6 project2left">
                     <h1>Park Away</h1>
                     <p>Park Away simplifies parking by helping users find and reserve slots near events or airports, with features for viewing prices and receiving reminders, streamlining the parking process efficiently.</p>
              
                 </div>
-                <div class="col-md-6 project2right">
+                <div class="cpl-12 col-md-6 project2right">
                     <img src="/assets/parkaway1.jpeg" alt="Park Away">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 project3left">
+                <div class="cpl-12 col-md-6 project3left">
                     <img src="/assets/studentportal1.jpeg" alt="student project portal">
                 </div>
-                <div class="col-md-6 project3right">
+                <div class="cpl-12 col-md-6 project3right">
                     <h1>Student Project Portal</h1>
                     <p>Student Project Portal offers a collaborative space for students to post and review university projects, receive feedback, and enhance project visibility through videos and posters.</p>
                 </div>
@@ -212,42 +229,38 @@
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="row">
-                <div class="col-md-6 contactleft">
+                <div class="cpl-12 col-md-6 contactleft">
                     <h1>Hello<strong style="color:#FF6F61;">.</strong></h1>
                     <!-- hexagon.component.html -->
 
                     <h3>"Ready to chat? Send me a good old-fashioned message or Launch an email. Can't wait to hear from
                         you!"</h3>
                 </div>
-                <div class="col-md-6 contactright">
+                <div class="cpl-12 col-md-6 contactright">
                     <div class="contact-form">
-                        <form
-                        action="https://formspree.io/f/xzbnorow"
-                        method="POST"
-                      >
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" id="name" name="name" required>
+                            <form action="https://getform.io/f/lakmdmra" method="POST">
+                                <div class="row">
+                                    <div class="cpl-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="name" name="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="cpl-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" id="email" name="email" required>
+                                <div class="row">
+                                    <div class="form-group message">
+                                        <label for="message">Message</label>
+                                        <textarea class="textarea is-large" id="message" name="message" rows="4" required></textarea>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group message">
-                                    <label for="message">Message</label>
-                                    <textarea class="textarea is-large" id="message" name="message" rows="4" required=""></textarea>
-                                </div>
-                            </div>
-                            <button class="btn" type="submit">Send A Message</button>
-                        </form>
-                        
+                                <button class="btn" type="submit">Send A Message</button>
+                            </form>
                         <div class="social-icons">
                             <a href="mailto:praneetha.vjws10%40gmail.com" target="_blank">
                                 <i class="fas fa-envelope fa-2x" style="color: #0082ca;"></i>

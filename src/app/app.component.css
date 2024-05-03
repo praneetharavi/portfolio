@@ -55,6 +55,10 @@ h1 {
     font-size: 48px;
     font-family: 'Sedan';
 }
+  
+  
+
+  
 nav {
     overflow: hidden;
 }
@@ -66,10 +70,7 @@ nav {
     right: 0;
     z-index: 1000;
     padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: transparent; /* Ensure there's no default background */
+    background-color: transparent; 
 }
 
 .navbar ul {
@@ -93,16 +94,20 @@ nav {
     text-decoration: none;
     padding: 14px 16px;
     display: inline-block;
-    transition: background-color 0.3s;
     background-color: transparent; /* Ensure links don't have a background */
 }
 
-/* Remove background change on hover */
+.navbar.dark-theme li a {
+    color: #DFD0B8; 
+  }
 .navbar a:hover {
     background-color: transparent;
     animation: bounce 1s forwards;
 }
-
+.navbar-brand img{
+   width: 80px;
+   height: 80px;
+}
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -163,6 +168,23 @@ nav {
     animation: slideInLeft 2s ease-out forwards; 
 }
 
+@media (max-width: 768px) {
+    .circle, .circle-left {
+        width: 50px;
+        height: 50px;
+    }
+
+    .triangle {
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 50px solid #FF6F61;
+    }
+
+    .rotated-rectangle {
+        width: 100px;
+        height: 25px;
+    }
+}
 
 @keyframes slideIn {
     from {
@@ -226,19 +248,44 @@ nav {
     padding: 20px;
     margin:0;
 }
+.experience-date::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px; /* Adjust based on your layout */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .experience-date::before {
+        left: calc(50% - 5px); /* Center the circle */
+    }
+}
+
 
 .skills .skill {
     display: flex;
     justify-content: center;
-    width: 140px;
+    width: 100%; /* Use 100% width for small screens */
+    max-width: 140px; /* Limit max width for larger screens */
     height: 50px;
-    margin: 15px; /* Adds some space around each skill */
-    padding: 5px 10px; /* Adds space inside each box */
+    margin: 15px auto; /* Centering it */
+    padding: 5px 10px;
     border: 2px solid #153448;
     box-shadow: 5px 10px #FF6F61;
-    border-radius: 5px; /* Optional: Rounds the corners of the boxes */
-    animation: shadowRise 1s alternate; 
-  }
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .skills .skill {
+        width: 90%; /* Make skill boxes wider on small screens */
+        margin: 10px auto;
+        padding: 10px;
+    }
+}
   @keyframes shadowRise {
     0% {
         box-shadow: 5px 20px #DFD0B8; /* Start with the shadow lower and more spread */
@@ -258,7 +305,6 @@ nav {
 .projects-section {
     min-height: 100vh;
     background-color: #DFD0B8;
-    color: #DFD0B8;
     padding: 50px 0; 
 }
 
@@ -494,7 +540,7 @@ ul{
     width: 750.99px;
     height: 451.15px;
     padding: 2px;
-
+     max-width: 100%; 
 }
 
 .project1right,.project2left,.project3right{
