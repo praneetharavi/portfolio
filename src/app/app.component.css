@@ -24,6 +24,14 @@ body {
     flex-direction: column;
 }
 
+.left{
+    height: 70vh;
+    margin-top: 160px;
+}
+
+.left h4{
+    padding-top: 20px;
+}
 .left p,.right p{
    font-family: 'Cantata One';
    font-size: 100px;
@@ -31,18 +39,13 @@ body {
    font-weight: bold;
 }
 
-.left h4{
-   padding-top: 300px;
-}
 .left {
     justify-content: center;
     align-items: flex-end;
     justify-items: center;
     background-color: #153448;
     color: #DFD0B8;
-    margin: 150px 0;
 }
-
 
 .right {
     padding-left: 30px;
@@ -59,10 +62,6 @@ h1 {
     font-size: 28px;
     font-family: 'Sedan';
 }
-  
-  
-
-  
 nav {
     overflow: hidden;
 }
@@ -225,7 +224,7 @@ nav {
     content: '';
     position: absolute;
     top: 0;
-    left: -25px; /* Adjust based on your layout */
+    left: -35px; /* Adjust based on your layout */
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -361,7 +360,7 @@ nav {
 .contact-form{
     background-color: #DFD0B8;
     height: 600px;
-    width: 1200px;
+    width: 1500px;
     padding: 25px 100px;
     margin-right:30px ;
 }
@@ -460,7 +459,7 @@ nav {
     content: '';
     position: absolute;
     top: 50%;
-    right: -42px; /* Position the circle correctly */
+    right: -30px; /* Position the circle correctly */
     width: 15px;
     height: 15px;
     border: 3px solid #FF6F61; /* Makes the circle hollow */
