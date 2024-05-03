@@ -32,8 +32,7 @@ body {
 }
 
 .left h4{
-
-   padding-top: 250px;
+   padding-top: 300px;
 }
 .left {
     justify-content: center;
@@ -41,7 +40,7 @@ body {
     justify-items: center;
     background-color: #153448;
     color: #DFD0B8;
-    margin: 200px 0;
+    margin: 150px 0;
 }
 
 
@@ -211,48 +210,17 @@ nav {
 }
 
 .experience-section {
-    min-height: 100vh;
     background-color: #153448;
     color: #DFD0B8;
     padding: 50px 0; 
 }
 
 .experience-container {
-    width: 80%; 
+    width: 100%; 
     margin: 0 auto; 
     margin-left: 120px;
 }
 
-.about-section{
-    background-color: #DFD0B8;
-    min-height: 100vh;
-}
-.about-container {
-    padding: 0;
-    margin: 0;
-}
-.aboutrow{
-    font-family: 'Sedan';
-    font-size: 1.4em;
-    color: #153448;
-    padding: 300px 200px;
-}
-
-.aboutleft{
-    padding: 20px;
-}
-
-.aboutright{
-    padding-left: 130px;
-    display: flex;
-    justify-content: center;
-}
-
-
-.skillrow{
-    padding: 20px;
-    margin:0;
-}
 .experience-date::before {
     content: '';
     position: absolute;
@@ -271,14 +239,42 @@ nav {
 }
 
 
+.about-section{
+    padding: 0;
+    margin: 0;
+    background-color: #DFD0B8;
+}
+.about-container {
+    padding: 0;
+    margin: 0;
+}
+.aboutrow{
+    font-family: 'Sedan';
+    font-size: 1.4em;
+    color: #153448;
+    padding: 300px 0;
+}
+
+.aboutleft{
+    padding-left: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.aboutright{
+    display: flex;
+    justify-content: center;
+}
+
 .skills .skill {
     display: flex;
     justify-content: center;
     width: 100%; /* Use 100% width for small screens */
     max-width: 140px; /* Limit max width for larger screens */
     height: 50px;
-    margin: 15px auto; /* Centering it */
-    padding: 5px 10px;
+    padding: 10px 30px;
     border: 2px solid #153448;
     box-shadow: 5px 10px #FF6F61;
     border-radius: 5px;
@@ -286,11 +282,20 @@ nav {
 
 @media (max-width: 768px) {
     .skills .skill {
-        width: 90%; /* Make skill boxes wider on small screens */
+        width: 100%; /* Make skill boxes wider on small screens */
         margin: 10px auto;
-        padding: 10px;
+        padding: 1px;
     }
 }
+
+
+.skillrow{
+    padding: 0px;
+    margin:0;
+}
+
+
+
   @keyframes shadowRise {
     0% {
         box-shadow: 5px 20px #DFD0B8; /* Start with the shadow lower and more spread */
@@ -342,7 +347,7 @@ nav {
 
 
 .contactleft h3{
-    margin:10px 320px;
+    margin:10px 120px;
     color: #FF6F61;
     font-size: 0.9em;
 }
@@ -355,9 +360,9 @@ nav {
 
 .contact-form{
     background-color: #DFD0B8;
-    height: 800px;
-    width: 1000px;
-    padding: 100px;
+    height: 600px;
+    width: 1200px;
+    padding: 25px 100px;
     margin-right:30px ;
 }
 
@@ -381,7 +386,7 @@ nav {
     max-width: 100%;
     min-width: 100%;
     font-family: 'Sedan';
-    font-size: 1.8em;
+    font-size: 1.5em;
     border: 2px solid #153448;
     border-radius: 8px;
 }
@@ -397,16 +402,16 @@ nav {
     border-radius: 8px;
 }
 .social-icons i{
-    padding: 20px;
-    padding-top: 30px;
+    padding: 10px 10px;
+    font-size: 1.5em;
 }
 
 .btn{
-    padding: 20px;
-    margin: 50px 0;
+    padding: 15px;
+    margin: 30px 0;
     border: 3px solid #153448;
     color: #153448;
-    font-size: 1.5em;
+    font-size: 1.0em;
     font-family: 'Sedan';
     font-weight: bold;
 }
@@ -414,9 +419,6 @@ nav {
 .btn:hover{
     background-color: #FF6F61;
     color: #153448;
-    font-size: 1.5em;
-    font-family: 'Sedan';
-    font-weight: bold;
 }
 .experience-container {
     margin: auto;
@@ -425,7 +427,7 @@ nav {
 }
 
 .experiencerow {
-    padding-left: 70px;
+    padding-left: 10px;
     margin: 60px;
     display: flex;
     align-items: center;
@@ -442,28 +444,10 @@ nav {
 }
 
 
-@keyframes slideInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-@keyframes fillCircle {
-    0% {
-        background: transparent; /* Circle starts transparent */
-    }
-    100% {
-        background: #FF6F61; /* Circle fills with color */
-    }
-}
 
 .experience-date h3 {
-    font-size: 1.3em;
+    font-size: 1.0em;
     font-family: 'Sedan';
     margin: 0;
     position: relative;
@@ -489,9 +473,13 @@ nav {
 
 .experience-description {
     flex-grow: 1; /* Allows the description to take up the rest of the space */
-    padding-left: 300px; /* Space after the line */
+    padding-left: 100px; /* Space after the line */
     position: relative;
-    top: -10px; /* Moves the description slightly up to align with the date */
+    top: 30px; /* Moves the description slightly up to align with the date */
+}
+
+.experience-description li{
+    font-size: 0.8em;
 }
 
 .experience-description strong {
@@ -499,6 +487,23 @@ nav {
     transform: translateX(100%); 
     animation: slideInRight 1s forwards;
 }
+
+.experience-description h3 {
+    font-family: 'Sedan';
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.experience-container::before {
+    content: '';
+    position: absolute;
+    left: 15%; /* Aligns with the flex-basis of the date section */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #FF6F61; /* Adjusts the color of the line */
+}
+
 
 @keyframes slideInRight {
     0% {
@@ -511,20 +516,26 @@ nav {
     }
 }
 
-.experience-description h3 {
-    font-family: 'Sedan';
-    margin-top: 0;
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.experience-container::before {
-    content: '';
-    position: absolute;
-    left: 17%; /* Aligns with the flex-basis of the date section */
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #FF6F61; /* Adjusts the color of the line */
+@keyframes fillCircle {
+    0% {
+        background: transparent; /* Circle starts transparent */
+    }
+    100% {
+        background: #FF6F61; /* Circle fills with color */
+    }
 }
+
 
 ul{
     font-family: 'Sedan';
@@ -534,7 +545,7 @@ ul{
 }
 
 .projects-container{
-    padding: 90px;
+    padding: 60px 20px;
 }
 .projectrow{
     padding-bottom: 150px;
@@ -542,14 +553,14 @@ ul{
 .projects-container img{
     border: 10px solid #ebe2d4;
     border-radius: 30px;
-    width: 750.99px;
-    height: 451.15px;
+    width: 950.99px;
+    height: 351.15px;
     padding: 2px;
      max-width: 100%; 
 }
 
 .project1right,.project2left,.project3right{
-    padding: 100px;
+    padding: 10px 90px;
     font-family: 'Sedan';
 }
 .project1right p,.project2left p,.project3right p{
